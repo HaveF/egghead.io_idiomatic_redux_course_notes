@@ -31,6 +31,8 @@ We are going to move our `getVisibleTodos` implementation into the file with the
 
 The convention we follow is simple. The default export is always the reducer function, but any named export starting with `'get'` is a function that prepares the data to be displayed by the UI. We usually call these functions _selectors_ because they select something from the current state.
 
+> 这个默认的规则好~~ 准备相应的数据的函数放在reducer相关的js中.
+
 In the reducers, the `state` argument corresponds to the state of this particular reducer, so we will follow the same convention for selectors. The `state` argument corresponds to the state of the exported reducer in this file.
 
 #### Inside `src/reducers/todos.js`
@@ -57,6 +59,8 @@ With this in mind, we are going to update our root reducer with a named selector
 Now we want to be able to call the `getVisibleTodos` function defined in the `todos` file alongside the reducer, but we can't use a named import because there is a function with exactly the same name in the scope.
 
 To work around this, we will use the name space import syntax that puts all the exports on an object (called `fromTodos` in this case).
+
+> 我觉得这个技巧简直太吊炸天了....函数放的位置也合适, warp放的位置也合适, 用的技巧也牛掰....
 
 Now we can use `fromTodos.getVisibleTodos()` to call the function we defined in the other file, and pass the slice of the `state` corresponding to the `todos`.
 

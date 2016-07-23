@@ -22,6 +22,8 @@ export const loadState = () => {
 };
 ```
 
+> 所以, 这个localStorage是直接拿起来就可以直接用的吗?
+
 In our `loadState` function, if the `serializedState` is `null`, it means that the key doesn't exist, so we return `undefined` which lets the reducers set the state instead.
 
 However, if the `serializedState` string exists, we'll use `JSON.parse(serializedState)` in order to return it into the `state` object.
@@ -94,6 +96,8 @@ To get around this, we will use an npm module called `node-uuid`:
 
 To use the module, we import `v4` from `node-uuid` and call it instead of `(nextTodoId++)`. _Note: `v4` is just the name of the standard._
 
+> 这个v4和node-uuid要记住呀
+
 ##### `addTodo` After:
 ```javascript
 import { v4 } from 'node-uuid'
@@ -140,6 +144,8 @@ store.subscribe(throttle(() => {
   })
 }, 1000))
 ```
+
+> 这个lodash中的throttle要记住呀~~~ 让某个函数在某个时间段不要最多运行一次.
 
 Now, even if the store gets updated really fast, we have a guarantee that we only write to `localStorage` once a second at most.
 

@@ -38,6 +38,8 @@ We will start by importing `withRouter` from React Router (version 3+):
 
 `withRouter` takes a React component and returns a different React component that injects the router-related props such as `params` into your component.
 
+> ! `withRouter`
+
 We want `params` to be available inside of `mapStateToProps`, so we need to wrap the `connect()` result so that the connected component gets the `params` as a prop.
 
 We will also need to change `mapStateToProps` to read the `filter` from `ownProps.params` instead of `ownProps` directly.

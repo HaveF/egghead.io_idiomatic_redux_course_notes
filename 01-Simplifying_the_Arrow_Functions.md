@@ -40,6 +40,8 @@ export const addTodo = (text) => ({
 })
 ```
 
+> 加了)的目的在于, 要让其中の{}成为一个expression, 而非block.
+
 *Note:* It is important to wrap the expression in parens so that the parser understands this as an expression instead of a block.
 
 These steps can be repeated for any function that just returns an object; just remove the `return` statement, and change the body into an expression.
@@ -84,5 +86,7 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
     }
 })
 ```
+
+> 这一点我还不知道, 但其实在ES6中应该是类似 `{xxx, yyy}` 的写法
 
 #### [Recap at 2:05 in video](https://egghead.io/lessons/javascript-redux-simplifying-the-arrow-functions?course=building-react-applications-with-idiomatic-redux)

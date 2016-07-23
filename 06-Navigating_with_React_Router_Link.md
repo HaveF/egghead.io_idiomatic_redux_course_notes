@@ -70,6 +70,8 @@ The previous implementation used the convention for the `filter` prop, but we wi
 
 We use a null string to signify the default path and avoid passing an empty string.
 
+> 哪呢? a null string
+
 ### Update `FilterLink.js` Implementation
 In our current implementation, the `FilterLink` component dispatches an action every time that it's clicked, then reads its active state from the store and compares its `filter` prop to the `visibilityFilter` in the store.
 
@@ -128,6 +130,8 @@ FilterLink.propTypes = {
 
 export default FilterLink;
 ```
+
+> Link的to属性~ activeStyle属性~~
 
 ### More Cleanup to Do...
 We are no longer using the `setVisibilityFilter` action creator, so it can be removed from `src/actions/index.js`, leaving us with just `addTodo` and `toggleTodo` action creators.

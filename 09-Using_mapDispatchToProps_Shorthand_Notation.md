@@ -1,6 +1,8 @@
 # 09. Using `mapDispatchToProps()` Shorthand Notation
 [Video Link](https://egghead.io/lessons/javascript-redux-using-mapdispatchtoprops-shorthand-notation)
 
+> connect的一个参数简略形式.
+
 The `mapDispatchToProps` function lets us inject certain props into the React component that can dispatch actions. For example, the `TodoList` component calls its `onTodoClick` callback prop with the `id` of the `todo`.
 
 #### Inside `TodoList`

@@ -59,6 +59,8 @@ const getVisibleTodos = (todos, filter) => {
 };
 ```
 
+> Dan神在redux第一季的时候,大概就想好了这个,,,,visibilityFilter逻辑上就不是个改放在store里面的东西,,,,,只要有Link, 就让react route去处理吧...
+
 ## Updating `App.js`
 
 Since the `VisibleTodoList` component gets rendered from the app, we need to add the `filter` prop to make it available in the `mapStateToProps` function of the `VisibleTodoList`.
@@ -80,6 +82,9 @@ const App = ({ params }) => (
 ```
 
 Now that our visbility filters are managed by React Router, we no longer need the `visibilityFilter` reducer. We can delete it, and also remove it from the `combineReducers()` declaration in `index.js`.
+
+
+> 视频中讲的, express 的 `/*`那个还不是很明白. TODO
 
 
 [Recap at 2:20 in video](https://egghead.io/lessons/javascript-redux-filtering-redux-state-with-react-router-params)

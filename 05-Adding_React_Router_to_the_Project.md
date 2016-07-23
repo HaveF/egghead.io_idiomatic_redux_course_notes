@@ -47,6 +47,8 @@ const Root = ({ store }) => (
 .
 ```
 
+> 这节也没啥干货,,,,browserHistory这些都是react-router里面的基础了.
+
 _Note: the video contains a fix for weird address bar symbols stemming from an old release of `react-router`_
 
 [Recap at 1:09 in video](https://egghead.io/lessons/javascript-redux-adding-react-router-to-the-project?series=building-react-applications-with-idiomatic-redux#/tab-transcript)

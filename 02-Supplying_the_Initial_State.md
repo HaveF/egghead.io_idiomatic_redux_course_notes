@@ -63,4 +63,6 @@ Since the `persistedState` that we provided as a second argument to `createStore
 
 It may be tempting to supply an initial state for your entire store inside of `persistedState`, but it is not recommended. If you were to do this, it would become more difficult to test and change your reducers later.
 
+> 所以说, 这个, 用的地方在....程序关闭之后, 下次启动时, 把该load进来的load进来....还有什么地方用呢?
+
 #### [Recap at 1:42 in video](https://egghead.io/lessons/javascript-redux-supplying-the-initial-state)
