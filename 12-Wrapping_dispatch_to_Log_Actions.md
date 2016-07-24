@@ -50,6 +50,8 @@ const returnValue = rawDispatch(action);
 console.log('%c next state', 'color: green', store.getState());
 ```
 
+> `%c` 是color的意思?
+
 If the `console.group()` API is not available in all browsers, we just return the raw dispatch as is.
 
 ```javascript
